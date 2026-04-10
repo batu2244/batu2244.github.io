@@ -7,10 +7,10 @@ projects:
     image: /assets/images/project_energy.png
   - name: Domain-Specific RAG Chatbot
     url: /projects/domain-specific-rag-chatbot/
-    image: /assets/images/project_eeg.jpeg
+    image: /assets/images/project_placeholder.png
   - name: NLP Text Embedding and Cluster Analysis
     url: /projects/nlp-text-embedding/
-    image: /assets/images/project_energy.png
+    image: /assets/images/project_placeholder.png
   - name: CUDA Accelerated Python Library
     url: /projects/cuda-python-library/
-    image: /assets/images/project_eeg.jpeg
+    image: /assets/images/project_placeholder.png
