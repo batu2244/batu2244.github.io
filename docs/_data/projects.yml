@@ -1,0 +1,7 @@
+projects:
+  - name: Alvin Lab EEG Experiment
+    url: /projects/alvin-lab-eeg/
+    image: /assets/images/project_eeg.jpeg
+  - name: Predictive Modeling of Residential Energy Consumption in Los Angeles
+    url: /projects/energy/
+    image: /assets/images/project_energy.png
