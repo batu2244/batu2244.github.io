@@ -31,7 +31,7 @@ rrss:
   email: mailto:batuhana@usc.edu
 
 # Build settings
-remote_theme: a-chacon/wind
+theme: wind-theme
 future: true
 plugins:
   - jekyll-feed

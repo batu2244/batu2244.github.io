@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 936 682" width="936" height="682">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <radialGradient id="clusterA" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#22d3ee;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="clusterB" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="clusterC" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#34d399;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#34d399;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="clusterD" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fb923c;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#fb923c;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="936" height="682" fill="url(#bg2)"/>
+
+  <!-- Cluster halos -->
+  <ellipse cx="290" cy="260" rx="130" ry="110" fill="url(#clusterA)" opacity="0.9"/>
+  <ellipse cx="560" cy="200" rx="110" ry="95" fill="url(#clusterB)" opacity="0.9"/>
+  <ellipse cx="650" cy="400" rx="120" ry="100" fill="url(#clusterC)" opacity="0.9"/>
+  <ellipse cx="330" cy="430" rx="100" ry="85" fill="url(#clusterD)" opacity="0.9"/>
+
+  <!-- Edges (faint connections between nodes) -->
+  <g stroke="#334155" stroke-width="1" opacity="0.5">
+    <!-- cluster A internal -->
+    <line x1="260" y1="230" x2="310" y2="270"/>
+    <line x1="310" y1="270" x2="285" y2="300"/>
+    <line x1="260" y1="230" x2="230" y2="270"/>
+    <line x1="230" y1="270" x2="285" y2="300"/>
+    <line x1="310" y1="270" x2="340" y2="250"/>
+    <line x1="285" y1="300" x2="320" y2="310"/>
+    <line x1="260" y1="230" x2="240" y2="210"/>
+    <!-- cluster B internal -->
+    <line x1="535" y1="175" x2="580" y2="200"/>
+    <line x1="580" y1="200" x2="555" y2="230"/>
+    <line x1="535" y1="175" x2="510" y2="200"/>
+    <line x1="510" y1="200" x2="555" y2="230"/>
+    <line x1="580" y1="200" x2="608" y2="185"/>
+    <line x1="555" y1="230" x2="570" y2="255"/>
+    <!-- cluster C internal -->
+    <line x1="625" y1="375" x2="670" y2="400"/>
+    <line x1="670" y1="400" x2="645" y2="430"/>
+    <line x1="625" y1="375" x2="600" y2="410"/>
+    <line x1="600" y1="410" x2="645" y2="430"/>
+    <line x1="670" y1="400" x2="695" y2="385"/>
+    <line x1="645" y1="430" x2="660" y2="455"/>
+    <!-- cluster D internal -->
+    <line x1="305" y1="405" x2="350" y2="430"/>
+    <line x1="350" y1="430" x2="325" y2="460"/>
+    <line x1="305" y1="405" x2="285" y2="435"/>
+    <line x1="285" y1="435" x2="325" y2="460"/>
+    <!-- inter-cluster (sparse) -->
+    <line x1="340" y1="250" x2="510" y2="200" opacity="0.2"/>
+    <line x1="320" y1="310" x2="285" y2="435" opacity="0.15"/>
+    <line x1="570" y1="255" x2="600" y2="410" opacity="0.2"/>
+    <line x1="350" y1="430" x2="600" y2="410" opacity="0.15"/>
+  </g>
+
+  <!-- Cluster A nodes (cyan) -->
+  <g filter="url(#glow2)">
+    <circle cx="260" cy="230" r="7" fill="#22d3ee"/>
+    <circle cx="310" cy="270" r="9" fill="#22d3ee"/>
+    <circle cx="285" cy="300" r="6" fill="#67e8f9"/>
+    <circle cx="230" cy="270" r="6" fill="#67e8f9"/>
+    <circle cx="340" cy="250" r="5" fill="#22d3ee" opacity="0.8"/>
+    <circle cx="320" cy="310" r="5" fill="#67e8f9" opacity="0.7"/>
+    <circle cx="240" cy="210" r="4" fill="#22d3ee" opacity="0.6"/>
+  </g>
+  <!-- Cluster A labels -->
+  <text x="260" y="218" text-anchor="middle" font-family="monospace" font-size="10" fill="#67e8f9" opacity="0.85">sports</text>
+  <text x="317" y="260" text-anchor="middle" font-family="monospace" font-size="10" fill="#22d3ee" opacity="0.9">game</text>
+  <text x="285" y="320" text-anchor="middle" font-family="monospace" font-size="10" fill="#67e8f9" opacity="0.7">team</text>
+  <text x="224" y="260" text-anchor="middle" font-family="monospace" font-size="10" fill="#67e8f9" opacity="0.7">play</text>
+  <text x="350" y="242" text-anchor="middle" font-family="monospace" font-size="9" fill="#22d3ee" opacity="0.6">score</text>
+
+  <!-- Cluster B nodes (purple) -->
+  <g filter="url(#glow2)">
+    <circle cx="535" cy="175" r="8" fill="#a78bfa"/>
+    <circle cx="580" cy="200" r="10" fill="#a78bfa"/>
+    <circle cx="555" cy="230" r="6" fill="#c4b5fd"/>
+    <circle cx="510" cy="200" r="6" fill="#c4b5fd"/>
+    <circle cx="608" cy="185" r="5" fill="#a78bfa" opacity="0.8"/>
+    <circle cx="570" cy="255" r="4" fill="#c4b5fd" opacity="0.7"/>
+  </g>
+  <text x="535" y="163" text-anchor="middle" font-family="monospace" font-size="10" fill="#c4b5fd" opacity="0.85">model</text>
+  <text x="587" y="190" text-anchor="middle" font-family="monospace" font-size="10" fill="#a78bfa" opacity="0.9">neural</text>
+  <text x="555" y="248" text-anchor="middle" font-family="monospace" font-size="10" fill="#c4b5fd" opacity="0.7">data</text>
+  <text x="502" y="192" text-anchor="middle" font-family="monospace" font-size="10" fill="#c4b5fd" opacity="0.7">train</text>
+  <text x="622" y="179" text-anchor="middle" font-family="monospace" font-size="9" fill="#a78bfa" opacity="0.6">embed</text>
+
+  <!-- Cluster C nodes (green) -->
+  <g filter="url(#glow2)">
+    <circle cx="625" cy="375" r="7" fill="#34d399"/>
+    <circle cx="670" cy="400" r="9" fill="#34d399"/>
+    <circle cx="645" cy="430" r="6" fill="#6ee7b7"/>
+    <circle cx="600" cy="410" r="6" fill="#6ee7b7"/>
+    <circle cx="695" cy="385" r="5" fill="#34d399" opacity="0.8"/>
+    <circle cx="660" cy="455" r="4" fill="#6ee7b7" opacity="0.7"/>
+  </g>
+  <text x="625" y="363" text-anchor="middle" font-family="monospace" font-size="10" fill="#6ee7b7" opacity="0.85">policy</text>
+  <text x="677" y="390" text-anchor="middle" font-family="monospace" font-size="10" fill="#34d399" opacity="0.9">vote</text>
+  <text x="645" y="448" text-anchor="middle" font-family="monospace" font-size="10" fill="#6ee7b7" opacity="0.7">law</text>
+  <text x="590" y="402" text-anchor="middle" font-family="monospace" font-size="10" fill="#6ee7b7" opacity="0.7">gov</text>
+  <text x="709" y="379" text-anchor="middle" font-family="monospace" font-size="9" fill="#34d399" opacity="0.6">bill</text>
+
+  <!-- Cluster D nodes (orange) -->
+  <g filter="url(#glow2)">
+    <circle cx="305" cy="405" r="7" fill="#fb923c"/>
+    <circle cx="350" cy="430" r="9" fill="#fb923c"/>
+    <circle cx="325" cy="460" r="6" fill="#fdba74"/>
+    <circle cx="285" cy="435" r="6" fill="#fdba74"/>
+    <circle cx="375" cy="415" r="4" fill="#fb923c" opacity="0.7"/>
+  </g>
+  <text x="305" y="393" text-anchor="middle" font-family="monospace" font-size="10" fill="#fdba74" opacity="0.85">market</text>
+  <text x="357" y="420" text-anchor="middle" font-family="monospace" font-size="10" fill="#fb923c" opacity="0.9">stock</text>
+  <text x="325" y="478" text-anchor="middle" font-family="monospace" font-size="10" fill="#fdba74" opacity="0.7">price</text>
+  <text x="272" y="427" text-anchor="middle" font-family="monospace" font-size="10" fill="#fdba74" opacity="0.7">trade</text>
+
+  <!-- Silhouette score badge -->
+  <rect x="720" y="80" width="170" height="90" rx="10" fill="#161b22" stroke="#334155" stroke-width="1"/>
+  <text x="805" y="102" text-anchor="middle" font-family="monospace" font-size="11" fill="#94a3b8">Silhouette Score</text>
+  <text x="805" y="130" text-anchor="middle" font-family="monospace" font-size="28" font-weight="bold" fill="#22d3ee">0.71</text>
+  <text x="805" y="154" text-anchor="middle" font-family="monospace" font-size="10" fill="#64748b">Doc2Vec · cosine</text>
+
+  <!-- Legend -->
+  <g transform="translate(36, 80)">
+    <circle cx="10" cy="10" r="6" fill="#22d3ee"/>
+    <text x="22" y="14" font-family="monospace" font-size="11" fill="#94a3b8">Sports</text>
+    <circle cx="10" cy="34" r="6" fill="#a78bfa"/>
+    <text x="22" y="38" font-family="monospace" font-size="11" fill="#94a3b8">Technology</text>
+    <circle cx="10" cy="58" r="6" fill="#34d399"/>
+    <text x="22" y="62" font-family="monospace" font-size="11" fill="#94a3b8">Politics</text>
+    <circle cx="10" cy="82" r="6" fill="#fb923c"/>
+    <text x="22" y="86" font-family="monospace" font-size="11" fill="#94a3b8">Finance</text>
+  </g>
+
+  <!-- Title -->
+  <text x="468" y="580" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#f1f5f9" letter-spacing="0.5">NLP Text Embedding &amp; Cluster Analysis</text>
+  <text x="468" y="608" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">Doc2Vec · Word2Vec · KMeans · Gensim</text>
+</svg>
