@@ -2,6 +2,8 @@
 layout: home
 ---
 
-I'm Batuhan Aydin, a Master's student in Applied Data Science at USC with a background in economics and a strong interest in machine learning, AI, data systems, and research. I enjoy building and exploring systems that help solve real-world problems, uncover inefficiencies, and turn data into practical impact. I'm especially excited about working on solutions that improve existing processes, identify gaps in current systems, and ultimately make life easier and more efficient for everyone.
+I'm Batuhan Aydin, a USC Applied Data Science Master's student drawn to LLM agents, retrieval systems, and the messy data plumbing that makes them actually work. I like digging into economic datasets and shipping small ML tools that expose inefficiencies hiding in plain sight.
+
+Fun fact: I successfully baked focaccia bread.
 
 [LinkedIn](https://www.linkedin.com/in/batuhan-aydin22)
