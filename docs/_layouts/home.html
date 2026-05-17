@@ -1,0 +1,73 @@
+---
+layout: base
+---
+<main class="page-main">
+  <div class="container">
+    <section id="about" class="home-hero">
+      <p class="eyebrow">Applied data science · Los Angeles</p>
+      <h1 class="name">{{ site.title }}</h1>
+      <div class="intro prose">
+        {{ content }}
+      </div>
+      <div class="links">
+        <a href="#projects">View projects ↓</a>
+        <a href="{{ '/photo-blog/' | relative_url }}">Photo blog →</a>
+      </div>
+    </section>
+
+    <div class="hairline" aria-hidden="true"></div>
+
+    <section id="projects" class="home-projects">
+      <header class="editorial-header">
+        <p class="eyebrow">Selected work · 2023 - 2025</p>
+        <h2 class="editorial-title">Projects</h2>
+        <p class="editorial-lede">Selected projects I've worked on</p>
+      </header>
+
+      <div class="project-grid" aria-label="Project list">
+        {% for project in site.data.projects.projects %}
+        <article class="project-card">
+          {% if project.github %}
+          <a href="{{ project.github }}" class="project-card-cover" target="_blank" rel="noopener" aria-label="Open {{ project.name }} on GitHub">
+            <div class="cover-frame">
+              <img src="{{ project.image | relative_url }}" alt="{{ project.name }} - cover" loading="{% if forloop.index0 < 2 %}eager{% else %}lazy{% endif %}">
+            </div>
+          </a>
+          {% else %}
+          <div class="project-card-cover">
+            <div class="cover-frame">
+              <img src="{{ project.image | relative_url }}" alt="{{ project.name }} - cover" loading="{% if forloop.index0 < 2 %}eager{% else %}lazy{% endif %}">
+            </div>
+          </div>
+          {% endif %}
+          <div class="project-meta">
+            <div class="project-title-row">
+              <h3 class="project-title">
+                {% if project.github %}
+                <a href="{{ project.github }}" target="_blank" rel="noopener">{{ project.name }}</a>
+                {% else %}
+                {{ project.name }}
+                {% endif %}
+              </h3>
+              {% if project.year %}<span class="project-year">{{ project.year }}</span>{% endif %}
+            </div>
+            {% if project.tags %}
+            <ul class="project-tags">
+              {% for tag in project.tags %}<li>{{ tag }}</li>{% endfor %}
+            </ul>
+            {% endif %}
+            {% if project.github %}
+            <div class="project-links">
+              <a href="{{ project.github }}" class="project-link" target="_blank" rel="noopener">
+                GitHub
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+            {% endif %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</main>

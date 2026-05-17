@@ -1,16 +1,47 @@
 projects:
   - name: Alvin Lab EEG Experiment
     url: /projects/alvin-lab-eeg/
-    image: /assets/images/project_eeg.jpeg
-  - name: Predictive Modeling of Residential Energy Consumption in Los Angeles
+    image: /assets/images/project_eeg.jpg
+    year: "2024"
+    tags: [EEG, Python, MNE, Signal Processing]
+    description: >-
+      Designed and ran an EEG study at the Alvin Lab, building the data pipeline from raw electrode
+      signal capture through artifact rejection, time-frequency analysis, and statistical reporting.
+
+  - name: Predictive Modeling of Residential Energy Consumption in LA
     url: /projects/energy/
     image: /assets/images/project_energy.png
+    year: "2024"
+    tags: [XGBoost, GeoPandas, scikit-learn, Spatial ML]
+    description: >-
+      Built spatial regression and gradient-boosted models to predict residential energy use across
+      Los Angeles census tracts, exposing how income and building age drive consumption patterns.
+    github: https://github.com/batu2244/Predictive-Modeling-of-Residential-Energy-Consumption-in-Los-Angeles
+
   - name: Domain-Specific RAG Chatbot
     url: /projects/domain-specific-rag-chatbot/
-    image: /assets/images/project_rag.svg
-  - name: NLP Text Embedding and Cluster Analysis
+    image: /assets/images/project-rag.jpg
+    year: "2025"
+    tags: [LLM, RAG, FAISS, LangChain, Python]
+    description: >-
+      Retrieval-augmented chatbot grounded in a custom PDF corpus. Built the chunking, embedding,
+      and FAISS index pipeline plus a streaming chat interface with citation-aware responses.
+
+  - name: NLP Text Embedding & Cluster Analysis
     url: /projects/nlp-text-embedding/
-    image: /assets/images/project_nlp.svg
-  - name: CUDA Accelerated Python Library
+    image: /assets/images/project-nlp.jpg
+    year: "2024"
+    tags: [NLP, Doc2Vec, UMAP, Clustering]
+    description: >-
+      Compared Doc2Vec, sentence-transformers, and classical TF-IDF embeddings on a domain corpus,
+      then clustered and visualized the semantic landscape with UMAP and silhouette scoring.
+
+  - name: CUDA-Accelerated Python Library
     url: /projects/cuda-python-library/
-    image: /assets/images/project_cuda.svg
+    image: /assets/images/project-cuda.jpg
+    year: "2025"
+    tags: [CUDA, "C++", Python, GPU, CuPy]
+    description: >-
+      A small Python library that offloads numerical kernels to CUDA via custom kernels and CuPy.
+      Benchmarks show order-of-magnitude speedups over NumPy for the targeted workloads.
+    github: https://github.com/batu2244/CUDA-Accelerated-Python-Library

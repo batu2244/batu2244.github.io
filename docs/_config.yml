@@ -30,12 +30,17 @@ rrss:
   linkedin: https://www.linkedin.com/in/batuhan-aydin22
   email: mailto:batuhana@usc.edu
 
-# Build settings
-theme: wind-theme
+# Build settings - fully custom layouts, no external theme
 future: true
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - private
 
 # Exclude from processing.
 # The following items will not be processed, by default.

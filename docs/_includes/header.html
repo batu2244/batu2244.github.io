@@ -1,0 +1,14 @@
+{% assign nav = site.data.nav.items %}
+{% assign current = page.url %}
+<header class="site-header">
+  <div class="container site-header-inner">
+    <a href="{{ '/' | relative_url }}" class="site-logo">{{ site.title }}</a>
+    <nav class="site-nav" aria-label="Primary">
+      {% for item in nav %}
+        {% assign is_current = false %}
+        {% if current == item.href %}{% assign is_current = true %}{% endif %}
+        <a href="{{ item.href | relative_url }}"{% if is_current %} class="current" aria-current="page"{% endif %}>{{ item.label }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

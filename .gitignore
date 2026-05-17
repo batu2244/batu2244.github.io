@@ -1,3 +1,9 @@
-#ignoring specific file
 .DS_Store
 .claude
+
+# Jekyll build output and local caches
+docs/_site/
+docs/.jekyll-cache/
+docs/.sass-cache/
+docs/.bundle/
+docs/vendor/

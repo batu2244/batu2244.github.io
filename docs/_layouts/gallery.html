@@ -1,11 +1,18 @@
 ---
 layout: base
 ---
-<div class="md:w-4/5 mx-auto columns-2 md:columns-3 my-10 gap-2">
-  {% assign gallery_data = site.data[page.gallery_data] %}
-  {% for pic in gallery_data.photos %}
-  <div class="mb-2">
-    <img src="{{ pic.url }}" alt="{{ pic.description }}" class="w-full h-auto shadow-md">
+<main class="page-main">
+  <div class="container">
+    <a href="{{ '/photo-blog/' | relative_url }}" class="back-link">← Photo blog</a>
+    <header class="editorial-header" style="margin-bottom:2rem;">
+      <p class="eyebrow">Photo blog</p>
+      <h1 class="editorial-title">{{ page.title }}</h1>
+    </header>
+    {% assign gallery_data = site.data[page.gallery_data] %}
+    <div class="gallery-grid">
+      {% for pic in gallery_data.photos %}
+        <img src="{{ pic.url | relative_url }}" alt="{{ pic.description }}" loading="lazy">
+      {% endfor %}
+    </div>
   </div>
-  {% endfor %}
-</div>
+</main>
