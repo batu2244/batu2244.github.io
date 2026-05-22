@@ -1,0 +1,14 @@
+{% capture currentYear %}{{ 'now' | date: '%Y' }}{% endcapture %}
+
+<footer class="relative pt-24 pb-6">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-wrap text-left lg:text-left">
+      <div class="w-full lg:w-6/12 px-4">
+        {% include social.html %}
+      </div>
+    </div>
+    <div class="text-left text-sm text-gray-500 dark:text-slate-400 font-light pt-2 space-y-1 px-4">
+      <p>Made with ☕ by Batuhan Aydin</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,7 @@
+#ignoring specific file
+.DS_Store
+.claude
+
+# Accidental capture of macOS temp path (jekyll-remote-theme cache)
+docs/private/
+private/

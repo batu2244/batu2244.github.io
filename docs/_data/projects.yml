@@ -1,0 +1,16 @@
+projects:
+  - name: Alvin Lab EEG Experiment
+    url: /projects/alvin-lab-eeg/
+    image: /assets/images/project_eeg.jpeg
+  - name: Predictive Modeling of Residential Energy Consumption in Los Angeles
+    url: /projects/energy/
+    image: /assets/images/project_energy.png
+  - name: Domain-Specific RAG Chatbot
+    url: /projects/domain-specific-rag-chatbot/
+    image: /assets/images/project_rag.svg
+  - name: NLP Text Embedding and Cluster Analysis
+    url: /projects/nlp-text-embedding/
+    image: /assets/images/project_nlp.svg
+  - name: CUDA Accelerated Python Library
+    url: /projects/cuda-python-library/
+    image: /assets/images/project_cuda.svg

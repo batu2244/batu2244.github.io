@@ -1,0 +1,11 @@
+---
+layout: base
+---
+<div class="md:w-4/5 mx-auto columns-2 md:columns-3 my-10 gap-2">
+  {% assign gallery_data = site.data[page.gallery_data] %}
+  {% for pic in gallery_data.photos %}
+  <div class="mb-2">
+    <img src="{{ pic.url }}" alt="{{ pic.description }}" class="w-full h-auto shadow-md">
+  </div>
+  {% endfor %}
+</div>
