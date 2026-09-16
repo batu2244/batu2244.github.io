@@ -1,8 +1,7 @@
 ---
 layout: home
+headshot: /assets/images/headshot.jpg
 ---
-
-<img src="/assets/images/headshot.jpg" alt="Batuhan Aydin" class="mb-6" style="width:17rem;height:22rem;object-fit:cover;display:block;margin-left:auto;margin-right:auto;" />
 
 Hi, I'm Batu. I'm doing my M.S. in Applied Data Science at USC.
 

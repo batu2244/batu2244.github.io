@@ -1,16 +1,33 @@
+# Projects shown as cards on the main page.
+# group: research (large cards) or build (smaller cards)
+# image: optional background picture
 projects:
+  - name: NSF Smart and Connected Health Study
+    group: research
+    context: iLAB at USC
+    summary: I run the wearable data pipeline and track whether participants actually wear their devices.
+  - name: M3X Smart Environment Study
+    group: research
+    context: iLAB at USC
+    summary: A room with moving walls and tunable light. I built its firmware and control stack to study stress.
   - name: Alvin Lab EEG Experiment
-    url: /projects/alvin-lab-eeg/
-    image: /assets/images/project_eeg.jpeg
-  - name: Predictive Modeling of Residential Energy Consumption in Los Angeles
-    url: /projects/energy/
+    group: research
+    context: Visual neuroscience
+    summary: EEG sessions studying how people process what they see.
+  - name: Residential Energy Use in Los Angeles
     image: /assets/images/project_energy.png
+    group: build
+    context: CatBoost, OLS
+    summary: Predicts neighborhood energy use from housing, income, and solar data.
   - name: Domain-Specific RAG Chatbot
-    url: /projects/domain-specific-rag-chatbot/
-    image: /assets/images/project_rag.svg
-  - name: NLP Text Embedding and Cluster Analysis
-    url: /projects/nlp-text-embedding/
-    image: /assets/images/project_nlp.svg
+    group: build
+    context: FAISS, LlamaCpp
+    summary: Answers questions only from your documents, online or fully offline.
+  - name: NLP Text Embedding and Clustering
+    group: build
+    context: Doc2Vec, Word2Vec
+    summary: Compares two embedding methods for grouping Reddit posts by topic.
   - name: CUDA Accelerated Python Library
-    url: /projects/cuda-python-library/
-    image: /assets/images/project_cuda.svg
+    group: build
+    context: C, CUDA
+    summary: GPU kernels for matrix math and image filters, callable from Python.

@@ -1,28 +1,46 @@
 ---
 layout: base
 ---
-<div class="flex justify-center py-8">
-  <article class="text-left prose prose-p:font-extralight prose-slate dark:prose-invert primary-underline">
-    {{ content }}
-  </article>
+<div class="home">
+  <section class="home-intro">
+    {%- if page.headshot %}
+    <img class="home-intro__photo" src="{{ page.headshot | relative_url }}" alt="{{ site.title }}">
+    {%- endif %}
+    <article class="home-intro__text text-left prose prose-p:font-extralight prose-slate dark:prose-invert primary-underline">
+      {{ content }}
+    </article>
+  </section>
+
+  {% include project-cards.html %}
 </div>
 
-<div class="md:w-4/5 mx-auto gap-4 md:gap-6 columns-2 md:columns-3 mb-10">
-  {% for post in site.posts %}
-  <div class="md:fadeIn pb-8 mb-8 break-inside-avoid-column ">
-    <div
-      class="hover:underline hover:decoration-2 hover:underline-offset-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-104 duration-300">
-      <a href="{{ post.url | relative_url }}">
-        <img src="{{ post.image | relative_url }}" alt="" class="w-full max-w-screen-sm h-auto shadow-md">
-        <h2 class="text-lg md:text-xl lg:text-2xl pt-5 text-ellipsis overflow-hidden">{{post.title}}</h2>
-      </a>
-    </div>
+<style>
+  /* One content width for every section on the home page */
+  .home {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding-block: 2rem 1rem;
+  }
+  .home-intro {
+    display: grid;
+    grid-template-columns: 15rem minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: stretch;
+  }
+  /* Photo matches the height of the intro text beside it */
+  .home-intro__photo {
+    width: 100%;
+    height: 100%;
+    min-height: 18rem;
+    object-fit: cover;
+    object-position: center 60%;
+  }
+  .home-intro__text.prose { max-width: none; }
+  .home-intro__text > :first-child { margin-top: 0; }
+  .home-intro__text > :last-child { margin-bottom: 0; }
 
-    <div class="pt-2">
-      {% for tag in post.tags limit:3 %}
-      <span class="text-xs text-slate-700 dark:text-slate-100/80 align-middle">#{{tag}}</span>
-      {% endfor %}
-    </div>
-  </div>
-  {% endfor %}
-</div>
+  @media (max-width: 768px) {
+    .home-intro { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+    .home-intro__photo { width: 15rem; max-width: 100%; height: auto; min-height: 0; aspect-ratio: 3 / 4; margin: 0 auto; }
+  }
+</style>
