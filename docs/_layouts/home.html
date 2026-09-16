@@ -23,7 +23,7 @@ layout: base
   }
   .home-intro {
     display: grid;
-    grid-template-columns: 15rem minmax(0, 1fr);
+    grid-template-columns: 20rem minmax(0, 1fr);
     gap: 2.5rem;
     align-items: stretch;
   }
@@ -31,7 +31,7 @@ layout: base
   .home-intro__photo {
     width: 100%;
     height: 100%;
-    min-height: 18rem;
+    min-height: 24rem;
     object-fit: cover;
     object-position: center 60%;
   }
@@ -41,6 +41,6 @@ layout: base
 
   @media (max-width: 768px) {
     .home-intro { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
-    .home-intro__photo { width: 15rem; max-width: 100%; height: auto; min-height: 0; aspect-ratio: 3 / 4; margin: 0 auto; }
+    .home-intro__photo { width: 20rem; max-width: 100%; height: auto; min-height: 0; aspect-ratio: 3 / 4; margin: 0 auto; }
   }
 </style>
