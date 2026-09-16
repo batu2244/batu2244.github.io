@@ -29,7 +29,6 @@ github_username: batu2244
 # Navigation tab order (left to right)
 header_pages:
   - projects.markdown
-  - blog.markdown
   - photo-blog.markdown
 
 rrss:
