@@ -22,6 +22,10 @@ projects:
     summary: "Can a room respond to how you feel? M3X tests whether adjusting light, partitions, and sound in real time, based on signals from a wearable, can reduce stress at work. The goal is a system that learns which changes help each person, rather than applying the same fix to everyone."
   - name: Smart and Connected Health
     group: projects
+    media:
+      - src: /assets/images/project_sch.jpg
+        alt: A rugged Android phone running the study's data-recording app, showing that decoding is on and the latest 20-second file was saved
+        ratio: 0.75
     summary: "A long-term observational study that tracks activity, sleep, and daily rhythms through wearables to understand how everyday behavior shapes health and wellbeing. I build and run the backend that collects and stores that data, so it stays clean and continuous enough to catch patterns over months, not just days."
   - name: Lighting-Timing
     group: projects

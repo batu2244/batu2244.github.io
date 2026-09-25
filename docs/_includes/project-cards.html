@@ -104,6 +104,8 @@
   .work-media__item {
     flex: var(--ratio) 1 0;
     min-width: 0;
+    /* Cap row height so a lone tall photo doesn't fill the whole width */
+    max-width: calc(var(--ratio) * 22rem);
     aspect-ratio: var(--ratio);
     display: block;
     overflow: hidden;
