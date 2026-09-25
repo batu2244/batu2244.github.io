@@ -23,8 +23,14 @@ projects:
   - name: Smart and Connected Health
     group: projects
     media:
+      - src: /assets/images/project_sch_sensors.jpg
+        alt: Study devices on a desk, an Awair air-quality sensor next to a Fitbit Sense 2 box
+        ratio: 0.8825
       - src: /assets/images/project_sch.jpg
         alt: A rugged Android phone running the study's data-recording app, showing that decoding is on and the latest 20-second file was saved
+        ratio: 0.75
+      - src: /assets/images/project_sch_vitals.jpg
+        alt: A phone showing a wearable app's vitals list, including breathing rate, blood oxygen, resting heart rate, heart rate variability and skin temperature
         ratio: 0.75
     summary: "A long-term observational study that tracks activity, sleep, and daily rhythms through wearables to understand how everyday behavior shapes health and wellbeing. I build and run the backend that collects and stores that data, so it stays clean and continuous enough to catch patterns over months, not just days."
   - name: Lighting-Timing
