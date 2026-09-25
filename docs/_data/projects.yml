@@ -1,33 +1,40 @@
-# Projects shown as cards on the main page.
-# group: research (large cards) or build (smaller cards)
-# image: optional background picture
+# Cards shown on the main page.
+# group: projects or work
+# context: optional label pill
+# media: optional pictures/videos shown in one row above the text, each at its own shape
+#   src, alt, ratio (width / height); videos also take type: video and poster
+# embed / embed_title: optional live site shown inside the card
 projects:
-  - name: NSF Smart and Connected Health Study
-    group: research
-    context: iLAB at USC
-    summary: I run the wearable data pipeline and track whether participants actually wear their devices.
-  - name: M3X Smart Environment Study
-    group: research
-    context: iLAB at USC
-    summary: A room with moving walls and tunable light. I built its firmware and control stack to study stress.
-  - name: Alvin Lab EEG Experiment
-    group: research
-    context: Visual neuroscience
-    summary: EEG sessions studying how people process what they see.
-  - name: Residential Energy Use in Los Angeles
-    image: /assets/images/project_energy.png
-    group: build
-    context: CatBoost, OLS
-    summary: Predicts neighborhood energy use from housing, income, and solar data.
-  - name: Domain-Specific RAG Chatbot
-    group: build
-    context: FAISS, LlamaCpp
-    summary: Answers questions only from your documents, online or fully offline.
-  - name: NLP Text Embedding and Clustering
-    group: build
-    context: Doc2Vec, Word2Vec
-    summary: Compares two embedding methods for grouping Reddit posts by topic.
-  - name: CUDA Accelerated Python Library
-    group: build
-    context: C, CUDA
-    summary: GPU kernels for matrix math and image filters, callable from Python.
+  - name: M3X - Mind, Machine and Motor Nexus (NSF)
+    group: projects
+    media:
+      - src: /assets/images/project_m3x.jpg
+        alt: The M3X testbed, a row of workstations with movable fabric partitions and light strips in front of large windows
+        ratio: 1.3333
+      - src: /assets/images/project_m3x_partitions.mp4
+        type: video
+        poster: /assets/images/project_m3x_partitions_poster.jpg
+        alt: Video of the M3X partitions moving into place, controlled from a tablet dashboard
+        ratio: 0.5625
+      - src: /assets/images/project_ring.jpg
+        alt: A 3D-printed USC ring with embedded electronics, worn on a finger
+        ratio: 0.6931
+    summary: "Can a room respond to how you feel? M3X tests whether adjusting light, partitions, and sound in real time, based on signals from a wearable, can reduce stress at work. The goal is a system that learns which changes help each person, rather than applying the same fix to everyone."
+  - name: Smart and Connected Health
+    group: projects
+    summary: "A long-term observational study that tracks activity, sleep, and daily rhythms through wearables to understand how everyday behavior shapes health and wellbeing. I build and run the backend that collects and stores that data, so it stays clean and continuous enough to catch patterns over months, not just days."
+  - name: Lighting-Timing
+    group: projects
+    media:
+      - src: /assets/images/project_lighting_room.jpg
+        alt: The study room, an office with a desk, chairs and the adjustable ceiling light panel used for the lighting scenes
+        ratio: 1.3293
+      - src: /assets/images/project_lighting_timing.jpg
+        alt: Study design showing rest, arithmetic and recovery phases, with bright-cool and dim-warm lighting scenes turning on at randomly shifted times
+        ratio: 2
+    summary: "This lab study looks at when adaptive lighting should step in during stress, not just which light helps. Participants did a timed math stress test while wearing a wristband that recorded their body's stress responses. Bright, cool or dim, warm light turned on at randomly shifted times. I built the Python pipeline, from wristband signal cleaning to mixed-effects models of physiological and self-reported stress."
+  - name: Dr. Milou - petdentalcheckup.com
+    group: work
+    summary: "Most pet dental disease goes unnoticed until it's painful and expensive. Dr. Milou lets owners photograph their pet's teeth and get an AI assessment in seconds. The goal is to catch problems early and get owners to act - without alarming them or replacing the vet."
+    embed: https://petdentalcheckup.com/
+    embed_title: Dr. Milou - AI pet dental checkup
