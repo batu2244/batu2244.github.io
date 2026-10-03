@@ -43,7 +43,7 @@ projects:
         alt: Study design showing rest, arithmetic and recovery phases, with bright-cool and dim-warm lighting scenes turning on at randomly shifted times
         ratio: 2
     summary: "This lab study looks at when adaptive lighting should step in during stress, not just which light helps. Participants did a timed math stress test while wearing a wristband that recorded their body's stress responses. Bright, cool or dim, warm light turned on at randomly shifted times. I built the Python pipeline, from wristband signal cleaning to mixed-effects models of physiological and self-reported stress."
-  - name: Dr. Milou - petdentalcheckup.com
+  - name: "Dr. Milou - petdentalcheckup.com"
     group: work
     summary: "Most pet dental disease goes unnoticed until it's painful and expensive. Dr. Milou lets owners photograph their pet's teeth and get an AI assessment in seconds. The goal is to catch problems early and get owners to act - without alarming them or replacing the vet."
     embed: https://petdentalcheckup.com/
