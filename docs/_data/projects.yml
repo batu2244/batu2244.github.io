@@ -16,6 +16,7 @@ projects:
         poster: /assets/images/project_m3x_partitions_poster.jpg
         alt: Video of the M3X partitions moving into place, controlled from a tablet dashboard
         ratio: 0.5625
+        speed: 1.5
       - src: /assets/images/project_ring.jpg
         alt: A 3D-printed USC ring with embedded electronics, worn on a finger
         ratio: 0.6931

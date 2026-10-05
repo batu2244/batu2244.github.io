@@ -11,9 +11,9 @@
         <div class="work-media">
           {%- for m in p.media %}
           {%- if m.type == 'video' %}
-          <video class="work-media__item" style="--ratio: {{ m.ratio }}" src="{{ m.src | relative_url }}" poster="{{ m.poster | relative_url }}" aria-label="{{ m.alt }}" muted loop playsinline autoplay preload="none"></video>
+          <video class="work-media__item" style="--ratio: {{ m.ratio }}" src="{{ m.src | relative_url }}" poster="{{ m.poster | relative_url }}" aria-label="{{ m.alt }}"{% if m.speed %} data-speed="{{ m.speed }}"{% endif %} muted loop playsinline autoplay preload="none"></video>
           {%- else %}
-          <a class="work-media__item" style="--ratio: {{ m.ratio }}" href="{{ m.src | relative_url }}" target="_blank" rel="noopener" title="Open full-size image">
+          <a class="work-media__item" style="--ratio: {{ m.ratio }}" href="{{ m.src | relative_url }}" data-lightbox title="View larger">
             <img src="{{ m.src | relative_url }}" alt="{{ m.alt }}" loading="lazy" decoding="async">
           </a>
           {%- endif %}
@@ -45,6 +45,10 @@
   </ul>
 </section>
 {%- endfor -%}
+
+<dialog class="lightbox" aria-label="Enlarged image">
+  <img class="lightbox__img" src="" alt="">
+</dialog>
 
 <style>
   .work {
@@ -211,6 +215,45 @@
     .work-embed:hover { transform: none; }
   }
 
+  /* Enlarged project image: one click opens it, any click (or Esc) closes it */
+  .lightbox {
+    max-width: none;
+    max-height: none;
+    width: 100vw;
+    height: 100dvh;
+    margin: 0;
+    padding: 1rem;
+    border: 0;
+    background: transparent;
+    cursor: zoom-out;
+  }
+  .lightbox[open] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: lightbox-in 200ms ease-out;
+  }
+  .lightbox::backdrop {
+    background: rgba(15, 23, 42, 0.85);
+    animation: lightbox-fade 200ms ease-out;
+  }
+  .lightbox__img {
+    max-width: min(100%, 80rem);
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  }
+  .lightbox:focus { outline: none; }
+  @keyframes lightbox-in { from { opacity: 0; transform: scale(0.96); } }
+  @keyframes lightbox-fade { from { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) {
+    .lightbox[open], .lightbox::backdrop { animation: none; }
+  }
+
   @media (max-width: 640px) {
     .work-embed { --embed-scale: 0.45; }
     .work-media { gap: 0.375rem; margin-inline: -0.75rem; }
@@ -218,6 +261,13 @@
 </style>
 
 <script>
+  // Clips with a speed in _data/projects.yml play faster (or slower) than normal
+  document.querySelectorAll('video[data-speed]').forEach(function (v) {
+    var rate = parseFloat(v.dataset.speed);
+    v.defaultPlaybackRate = rate;
+    v.playbackRate = rate;
+  });
+
   // Looping clips stay still (poster + controls) for people who prefer reduced motion
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.querySelectorAll('video.work-media__item').forEach(function (v) {
@@ -226,4 +276,29 @@
       v.controls = true;
     });
   }
+
+  // Project images open enlarged on the page instead of in a new tab
+  (function () {
+    var box = document.querySelector('.lightbox');
+    if (!box || typeof box.showModal !== 'function') return; // link fallback
+    var big = box.querySelector('.lightbox__img');
+    var opener = null;
+    document.querySelectorAll('a[data-lightbox]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+        e.preventDefault();
+        var img = a.querySelector('img');
+        big.src = a.href;
+        big.alt = img ? img.alt : '';
+        opener = a;
+        box.showModal();
+        box.focus();
+      });
+    });
+    box.addEventListener('click', function () { box.close(); });
+    box.addEventListener('close', function () {
+      if (opener) opener.focus();
+      opener = null;
+    });
+  })();
 </script>
